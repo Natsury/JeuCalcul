@@ -1,3 +1,25 @@
 <resources>
-    <string name="app_name">JeuCalcul</string>
+    <string name="app_name" translatable="false">JeuCalcul</string>
+    <string name="text_playButton">PLAY</string>
+    <string name="text_highscoresButton">HIGH SCORES</string>
+    <string name="text_aboutButton">ABOUT</string>
+    <string name="text_AnswerTitle">Your answer :</string>
+    <string name="text_buttonDelete">DELETE</string>
+    <string name="text_buttonNine" translatable="false">9</string>
+    <string name="text_buttonEight" translatable="false">8</string>
+    <string name="text_buttonSeven" translatable="false">7</string>
+    <string name="text_buttonSix" translatable="false">6</string>
+    <string name="text_buttonFive" translatable="false">5</string>
+    <string name="text_buttonFour" translatable="false">4</string>
+    <string name="text_buttonThree" translatable="false">3</string>
+    <string name="text_buttonTwo" translatable="false">2</string>
+    <string name="text_buttonOne" translatable="false">1</string>
+    <string name="text_buttonZero" translatable="false">0</string>
+    <string name="text_buttonMinus" translatable="false">-</string>
+    <string name="text_buttonPoint" translatable="false">.</string>
+    <string name="text_buttonConfirm">CONFIRM</string>
+    <string name="text_buttonPause">PAUSE</string>
+    <string name="text_buttonSkip">SKIP</string>
+    <string name="text_lives">LIVES :</string>
+    <string name="text_score">SCORE :</string>
 </resources>

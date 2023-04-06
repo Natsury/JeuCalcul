@@ -12,6 +12,18 @@
         android:theme="@style/Theme.JeuCalcul"
         tools:targetApi="31">
         <activity
+            android:name=".AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HighscoresActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SaveScoreActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
