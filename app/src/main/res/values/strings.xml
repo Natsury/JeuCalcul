@@ -41,8 +41,8 @@
     <string name="textViewVies">Lives</string>
     <string name="ERROR_CHECKED_RADIO">Please choose a difficulty</string>
     <string name="textViewTimer">Time left : </string>
-    <string name="text_specialCredits">SPECIAL CREDITS</string>
-    <string name="credits_text">"Dans une galaxie lointaine, sur la planète Terre, se trouvent deux jeunes étudiants en 2ème année de BUT Informatique : Lucas Priez et Mattéo Leroux. Ces deux padawans de la programmation sont passionnés par les technologies de l'information et sont déterminés à se distinguer dans leur domaine en créant la meilleure application Android possible.
+    <string name="text_specialCredits" translatable="false">SPECIAL CREDITS</string>
+    <string name="credits_text" translatable="false">"Dans une galaxie lointaine, sur la planète Terre, se trouvent deux jeunes étudiants en 2ème année de BUT Informatique : Lucas Priez et Mattéo Leroux. Ces deux padawans de la programmation sont passionnés par les technologies de l'information et sont déterminés à se distinguer dans leur domaine en créant la meilleure application Android possible.
         \nLeur objectif est ambitieux, mais ils sont prêts à tout pour impressionner leur professeur, Jérome Gerard. En effet, leur note dépend en grande partie de leur réussite dans ce projet, ce qui les pousse à travailler dur et à redoubler d'efforts pour atteindre leur but.
         \nCependant, leur parcours n'est pas sans difficultés. Les étudiants doivent faire face à des obstacles technologiques tels que des bugs informatiques, des failles de sécurité ou encore des difficultés de codage. En outre, la rivalité entre eux peut aussi constituer un frein à leur collaboration, leur créativité et leur réussite.
         \nMalgré tout, ces jeunes étudiants possèdent une grande ingéniosité et une détermination sans faille. Ils sont convaincus qu'ils peuvent surmonter ces épreuves pour créer l'application ultime qui leur permettra de briller aux yeux de leur professeur et d'obtenir la reconnaissance qu'ils méritent.
@@ -61,5 +61,8 @@
         \nSoundtrack Composer\nMattéo Leroux\n
         \nGestion des copyrights\nPersonne lol\n
         \nSpecial thanks to Jérome Gerard, their professor, for his support and guidance throughout the project.\n\n"</string>
-    <string name="TitleText">A GAME MADE BY\n\nLUCAS PRIEZ\nAND\nMATTEO LEROUX\n</string>
+    <string name="TitleText" translatable="false">A GAME MADE BY\n\nLUCAS PRIEZ\nAND\nMATTEO LEROUX\n</string>
+    <string name="ERROR_EMPTY_NYCKNAME">Nickname can\'t be empty</string>
+    <string name="ERROR_NYCKNAME_TOO_LONG">Nickname can\'t be longer than 20 characters</string>
+    <string name="ScoreEnregiste">Score saved !</string>
 </resources>

@@ -2,6 +2,8 @@ package com.example.jeucalcul.DAO;
 
 import android.content.Context;
 
+import com.example.jeucalcul.model.entities.Score;
+
 public class ScoreBaseHelper extends DataBaseHelper{
 
     public ScoreBaseHelper(Context context, String dataBaseName, int dataBaseVersion) {
@@ -13,6 +15,7 @@ public class ScoreBaseHelper extends DataBaseHelper{
         return "CREATE TABLE IF NOT EXISTS " + ScoreDao.TABLE_NAME + " (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 ScoreDao.COLUMN_NICKNAME + " VARCHAR(20)," +
+                ScoreDao.COLUMN_DIFFICULTE + " VARCHAR(20)," +
                 ScoreDao.COLUMN_SCORE + " INTEGER NOT NULL)";
     }
 

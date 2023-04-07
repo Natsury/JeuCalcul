@@ -3,6 +3,7 @@ package com.example.jeucalcul.DAO;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 
 import com.example.jeucalcul.model.entities.BaseEntity;
@@ -30,6 +31,7 @@ public abstract class BaseDao<T extends BaseEntity> {
 
         ContentValues values = new ContentValues();
         putValues(values, entity);
+
 
         long newRowId = db.insert(getTableName(), null, values);
         entity.id = newRowId;

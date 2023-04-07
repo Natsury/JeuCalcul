@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">JeuCalcul</string>
+    <string name="text_playButton">JOUER</string>
+    <string name="text_highscoresButton">TABLEAU DES SCORES</string>
+    <string name="text_aboutButton"> À PROPOS</string>
+    <string name="text_AnswerTitle">Réponse :</string>
+    <string name="text_buttonDelete">SUPPRIMER</string>
+    <string name="text_buttonConfirm">CONFIRMER</string>
+    <string name="text_buttonPause">PAUSE</string>
+    <string name="text_buttonSkip">PASSER</string>
+    <string name="text_lives">VIES :</string>
+    <string name="text_score">SCORE :</string>
+    <string name="text_saveScore">Ton score :</string>
+    <string name="text_buttonSaveScore">ENREGISTRER LE SCORE</string>
+    <string name="text_buttonMainMenu">MENU PRINCIPALE</string>
+    <string name="hint_editEnterNickame">Entre ton pseudo</string>
+    <string name="text_aboutCredits">Créé par : \n\nLucas Priez \nMattéo Leroux</string>
+    <string name="text_featuresTitle">Features :</string>
+    <string name="text_featuresContent">• xxxxxxx \n• xxxxxxx \n• xxxxxxx \n• xxxxxxx</string>
+    <string name="text_aboutMainMenu">MENU PRINCIPALE</string>
+    <string name="textViewDifficulte">Difficulté : </string>
+    <string name="radioDifficulte1">Facile</string>
+    <string name="radioDifficulte2">Difficile</string>
+    <string name="radioDifficulteInfinite">Impossible</string>
+    <string name="textViewTimerParam">Timer : </string>
+    <string name="buttonValideParam">Confirmer </string>
+    <string name="textViewNombreVies">Vie(s) :</string>
+    <string name="textViewVies">Vies</string>
+    <string name="ERROR_CHECKED_RADIO">Veuillez choisir une difficulté</string>
+    <string name="textViewTimer">Temps restant : </string>
+    <string name="ERROR_EMPTY_NYCKNAME">Veuillez entrer un pseudo</string>
+    <string name="ERROR_NYCKNAME_TOO_LONG">Le pseudo ne peut pas avoir plus de 20 caractères</string>
+    <string name="ScoreEnregiste">Score sauvegardé !</string>
+</resources>

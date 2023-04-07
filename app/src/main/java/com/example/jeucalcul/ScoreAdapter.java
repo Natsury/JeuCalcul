@@ -33,11 +33,13 @@ public class ScoreAdapter extends ArrayAdapter<Score> {
 
         TextView nicknameTextView = view.findViewById(R.id.nicknameTextView);
         TextView scoreTextView = view.findViewById(R.id.scoreTextView);
+        TextView difficulteTextView = view.findViewById(R.id.textViewDifficulteHightScores);
 
         Score score = scores.get(position);
 
         nicknameTextView.setText(score.getNickname());
         scoreTextView.setText(String.valueOf(score.getScore()));
+        difficulteTextView.setText(score.getDifficulte());
 
         return view;
     }

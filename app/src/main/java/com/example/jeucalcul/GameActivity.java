@@ -2,6 +2,8 @@ package com.example.jeucalcul;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -14,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
-    private int lives = 3;
+    private int lives;
     private int score = 0;
     private int operand1;
     private int operand2;
@@ -38,11 +40,21 @@ public class GameActivity extends AppCompatActivity {
     private Button buttonDelete;
     private MenuItem toolbarLives;
     private MenuItem toolbarScore;
+    private String difficulte;
+    private CountDownTimer countDownTimer;
+    private TextView textViewTimer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        Intent intent = getIntent();
+
+        lives = intent.getIntExtra("nbVies", 3);
+        difficulte = intent.getStringExtra("difficulte");
+        textViewTimer = findViewById(R.id.textViewTimer);
         textViewCalcul = findViewById(R.id.textViewCalcul);
         textViewAnswer = findViewById(R.id.textViewAnswer);
         buttonOne = findViewById(R.id.buttonOne);
@@ -78,6 +90,20 @@ public class GameActivity extends AppCompatActivity {
 
         resetButtons();
         randomCalcul();
+
+        countDownTimer = new CountDownTimer(180001, 1000) {
+            @Override
+            public void onTick(long tempsRestant) {
+                textViewTimer.setText(getString(R.string.textViewTimer) + " " + tempsRestant/1000);
+            }
+
+            @Override
+            public void onFinish() {
+                toGameOver();
+            }
+        };
+
+        countDownTimer.start();
     }
 
     @Override
@@ -139,7 +165,7 @@ public class GameActivity extends AppCompatActivity {
     private void randomCalcul() {
         Random rand = new Random();
 
-        operand1 = rand.nextInt(10);
+        operand1 = randomNumber();
 
         int randomOperator = rand.nextInt(4);
         switch (randomOperator) {
@@ -160,10 +186,33 @@ public class GameActivity extends AppCompatActivity {
         if (randomOperator == 3)
             operand2 = 2;
         else
-            operand2 = rand.nextInt(10);
+            operand2 = randomNumber();
 
         textViewCalcul.setText(operand1 + " " + operator + " " + operand2 + " = ?");
     }
+
+    private int randomNumber(){
+        Random rand = new Random();
+        int res;
+
+        switch (difficulte){
+            case "facile":
+            case "easy":
+                res = rand.nextInt(10);
+                break;
+            case "difficile":
+            case "hard":
+                res = rand.nextInt(100);
+                break;
+            case "impossible":
+                res = rand.nextInt(999);
+                break;
+            default:
+                res = 0;
+        }
+        return res;
+    }
+
 
     private float trueAnswer() {
         switch (operator) {
@@ -178,6 +227,13 @@ public class GameActivity extends AppCompatActivity {
             default:
                 return 0;
         }
+    }
+
+    private void toGameOver(){
+        Intent intent = new Intent(this, SaveScoreActivity.class);
+        intent.putExtra("SCORE", score);
+        intent.putExtra("difficulte", difficulte);
+        startActivity(intent);
     }
 
     private void checkAnswer() {
@@ -195,9 +251,7 @@ public class GameActivity extends AppCompatActivity {
                 resetAnswer();
                 randomCalcul();
             }else{
-                Intent intent = new Intent(this, SaveScoreActivity.class);
-                intent.putExtra("SCORE", score);
-                startActivity(intent);
+                toGameOver();
             }
         }
     }

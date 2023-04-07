@@ -2,6 +2,7 @@ package com.example.jeucalcul;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,6 +21,7 @@ public class SaveScoreActivity extends AppCompatActivity {
     private Button buttonSaveScore;
     private Button buttonMainMenu;
     private ScoreDao scoreDao;
+    private String difficulte;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +34,12 @@ public class SaveScoreActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         score = intent.getIntExtra("SCORE", 0);
+        difficulte = intent.getStringExtra("difficulte");
 
         textViewScore.setText(textViewScore.getText().toString() + " " + score);
         buttonSaveScore.setOnClickListener(view -> SaveScore());
         buttonMainMenu.setOnClickListener(view -> MainMenu());
         scoreDao = new ScoreDao(new ScoreBaseHelper(this, "BDD", 1));
-
     }
 
     private void MainMenu() {
@@ -48,15 +50,15 @@ public class SaveScoreActivity extends AppCompatActivity {
     private void SaveScore() {
         String nickname = editTextNickaname.getText().toString();
         if (nickname.isEmpty()) {
-            Toast.makeText(this, "Nickname can't be empty", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.ERROR_EMPTY_NYCKNAME), Toast.LENGTH_SHORT).show();
 
         } else if (nickname.length() > 20) {
-            Toast.makeText(this, "Nickname can't be longer than 20 characters", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.ERROR_NYCKNAME_TOO_LONG), Toast.LENGTH_SHORT).show();
 
         } else {
-            Score ScoreSave = new Score(nickname, score);
+            Score ScoreSave = new Score(nickname, score, difficulte);
             scoreDao.create(ScoreSave);
-            Toast.makeText(this, "Score saved !", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.ScoreEnregiste), Toast.LENGTH_SHORT).show();
             MainMenu();
         }
     }

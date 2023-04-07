@@ -14,10 +14,18 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/textViewTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="@string/textViewTimer"
+            android:textAlignment="textEnd"
+            android:textSize="25sp" />
+
+        <TextView
             android:id="@+id/textViewCalcul"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="309dp"
             android:gravity="center"
             android:text="999 / 999 = ?"
             android:textSize="50sp" />
@@ -34,7 +42,7 @@
                 android:id="@+id/textViewAnswerTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal|top"
                 android:text="@string/text_AnswerTitle"
                 android:textSize="30sp" />
@@ -43,9 +51,7 @@
                 android:id="@+id/textViewAnswer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:gravity="center_horizontal"
-                android:text="8384873"
                 android:textSize="30sp" />
 
             <LinearLayout

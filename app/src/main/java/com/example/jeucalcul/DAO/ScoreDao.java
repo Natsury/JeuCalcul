@@ -1,6 +1,7 @@
 package com.example.jeucalcul.DAO;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -14,6 +15,7 @@ public class ScoreDao extends BaseDao<Score> {
     public static String TABLE_NAME = "SCORES";
     public static String COLUMN_NICKNAME = "NICKNAME";
     public static String COLUMN_SCORE = "SCORE";
+    public static String COLUMN_DIFFICULTE = "DIFFICULTE";
 
     public ScoreDao(DataBaseHelper helper) {
         super(helper);
@@ -28,14 +30,16 @@ public class ScoreDao extends BaseDao<Score> {
     protected void putValues(ContentValues values, Score entity) {
         values.put(COLUMN_NICKNAME,entity.getNickname());
         values.put(COLUMN_SCORE,entity.getScore());
+        values.put(COLUMN_DIFFICULTE, entity.getDifficulte());
     }
 
     @Override
     protected Score getEntity(Cursor cursor) {
         Integer indexColumnNickname = cursor.getColumnIndex(COLUMN_NICKNAME);
         Integer indexColumnScore = cursor.getColumnIndex(COLUMN_SCORE);
+        Integer indexColumnDifficulte = cursor.getColumnIndex(COLUMN_DIFFICULTE);
         if(cursor.getCount()>0) {
-            Score monScore = new Score(cursor.getString(indexColumnNickname), cursor.getInt(indexColumnScore));
+            Score monScore = new Score(cursor.getString(indexColumnNickname), cursor.getInt(indexColumnScore), cursor.getString(indexColumnDifficulte));
             return monScore;
         }
         return null;
@@ -46,7 +50,9 @@ public class ScoreDao extends BaseDao<Score> {
 
         SQLiteDatabase db = this.dbHelper.getReadableDatabase();
 
-        String query = "SELECT " + COLUMN_NICKNAME + ", MAX(" + COLUMN_SCORE + ") AS " + COLUMN_SCORE +
+        String query = "SELECT " + COLUMN_NICKNAME + "," +
+                " MAX(" + COLUMN_SCORE + ") AS " + COLUMN_SCORE + "," +
+                COLUMN_DIFFICULTE +
                 " FROM " + TABLE_NAME +
                 " GROUP BY " + COLUMN_NICKNAME;
 
