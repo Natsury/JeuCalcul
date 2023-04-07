@@ -72,4 +72,6 @@
     <string name="BadAnserGameActivity">Wrong answer</string>
     <string name="PauseTimer">Game will be paused before the next calculation</string>
     <string name="PausedTimer">Game paused</string>
+    <string name="TextPlay" translatable="false">PLAY</string>
+    <string name="TextPause" translatable="false">PAUSE</string>
 </resources>

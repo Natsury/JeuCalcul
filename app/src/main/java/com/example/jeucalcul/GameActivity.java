@@ -296,7 +296,7 @@ public class GameActivity extends AppCompatActivity {
         buttonConfirm.setEnabled(false);
         buttonDelete.setEnabled(false);
         buttonSkip.setEnabled(false);
-        buttonPause.setText("PLAY");
+        buttonPause.setText(getString(R.string.TextPlay));
         Toast.makeText(this, getString(R.string.PausedTimer), Toast.LENGTH_SHORT).show();
         buttonPause.setEnabled(true);
     }
@@ -318,7 +318,7 @@ public class GameActivity extends AppCompatActivity {
         buttonConfirm.setEnabled(true);
         buttonDelete.setEnabled(true);
         buttonSkip.setEnabled(true);
-        buttonPause.setText("PAUSE");
+        buttonPause.setText(getString(R.string.TextPause));
     }
 
     private void nextCalcul() {
