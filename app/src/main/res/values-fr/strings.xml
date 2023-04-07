@@ -17,7 +17,6 @@
     <string name="hint_editEnterNickame">Entre ton pseudo</string>
     <string name="text_aboutCredits">Créé par : \n\nLucas Priez \nMattéo Leroux</string>
     <string name="text_featuresTitle">Features :</string>
-    <string name="text_featuresContent">• xxxxxxx \n• xxxxxxx \n• xxxxxxx \n• xxxxxxx</string>
     <string name="text_aboutMainMenu">MENU PRINCIPALE</string>
     <string name="textViewDifficulte">Difficulté : </string>
     <string name="radioDifficulte1">Facile</string>
@@ -32,4 +31,5 @@
     <string name="ERROR_EMPTY_NYCKNAME">Veuillez entrer un pseudo</string>
     <string name="ERROR_NYCKNAME_TOO_LONG">Le pseudo ne peut pas avoir plus de 20 caractères</string>
     <string name="ScoreEnregiste">Score sauvegardé !</string>
+    <string name="text_specialCredits">CREDIT SPECIAUX</string>
 </resources>
