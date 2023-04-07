@@ -102,18 +102,26 @@ public class GameActivity extends AppCompatActivity {
         if (answer.length() == 0){
             buttonMinus.setEnabled(true);
             buttonPoint.setEnabled(false);
+            buttonConfirm.setEnabled(false);
         } else {
+            boolean point = answer.endsWith(".");
+            boolean minus = answer.endsWith("-");
             buttonMinus.setEnabled(false);
-            if (answer.endsWith("."))
+            if (point)
                 buttonPoint.setEnabled(false);
             else
                 buttonPoint.setEnabled(true);
+            if (point || minus)
+                buttonConfirm.setEnabled(false);
+            else
+                buttonConfirm.setEnabled(true);
         }
     }
 
     private void resetButtons() {
         buttonMinus.setEnabled(true);
         buttonPoint.setEnabled(false);
+        buttonConfirm.setEnabled(false);
     }
 
     private void addChar(String character){

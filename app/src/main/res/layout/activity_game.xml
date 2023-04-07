@@ -25,7 +25,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="bottom"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="4dp">
 
             <TextView
                 android:id="@+id/textViewAnswerTitle"
@@ -52,7 +53,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/text_buttonPause" />
+                    android:text="@string/text_buttonPause"
+                    android:layout_marginStart="4dp" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -69,7 +71,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/text_buttonSkip" />
+                    android:text="@string/text_buttonSkip"
+                    android:layout_marginEnd="4dp" />
 
             </LinearLayout>
 
@@ -83,21 +86,27 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/text_buttonNine" />
+                    android:text="@string/text_buttonNine"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"/>
 
                 <Button
                     android:id="@+id/buttonEight"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/text_buttonEight" />
+                    android:text="@string/text_buttonEight"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"/>
 
                 <Button
                     android:id="@+id/buttonSeven"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/text_buttonSeven" />
+                    android:text="@string/text_buttonSeven"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -110,21 +119,27 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/text_buttonSix" />
+                    android:text="@string/text_buttonSix"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp" />
 
                 <Button
                     android:id="@+id/buttonFive"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/text_buttonFive" />
+                    android:text="@string/text_buttonFive"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp" />
 
                 <Button
                     android:id="@+id/buttonFour"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/text_buttonFour" />
+                    android:text="@string/text_buttonFour"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -137,21 +152,27 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/text_buttonThree" />
+                    android:text="@string/text_buttonThree"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp" />
 
                 <Button
                     android:id="@+id/buttonTwo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/text_buttonTwo" />
+                    android:text="@string/text_buttonTwo"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp" />
 
                 <Button
                     android:id="@+id/buttonOne"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/text_buttonOne" />
+                    android:text="@string/text_buttonOne"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -164,21 +185,27 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/text_buttonMinus" />
+                    android:text="@string/text_buttonMinus"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp" />
 
                 <Button
                     android:id="@+id/buttonZero"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/text_buttonZero" />
+                    android:text="@string/text_buttonZero"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp" />
 
                 <Button
                     android:id="@+id/buttonPoint"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/text_buttonPoint" />
+                    android:text="@string/text_buttonPoint"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp" />
 
             </LinearLayout>
 
@@ -192,14 +219,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/text_buttonDelete" />
+                    android:text="@string/text_buttonDelete"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp" />
 
                 <Button
                     android:id="@+id/buttonConfirm"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/text_buttonConfirm" />
+                    android:text="@string/text_buttonConfirm"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp" />
             </LinearLayout>
         </LinearLayout>
 

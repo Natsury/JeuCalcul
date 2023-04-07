@@ -22,4 +22,13 @@
     <string name="text_buttonSkip">SKIP</string>
     <string name="text_lives">LIVES :</string>
     <string name="text_score">SCORE :</string>
+    <string name="text_scoreSaveTitle">GAME OVER</string>
+    <string name="text_saveScore">Your score :</string>
+    <string name="text_buttonSaveScore">SAVE YOUR SCORE</string>
+    <string name="text_buttonMainMenu">MAIN MENU</string>
+    <string name="hint_editEnterNickame">Enter your nickname</string>
+    <string name="text_aboutCredits">Created by : \n\nLucas Priez \nMattéo Leroux</string>
+    <string name="text_featuresTitle">Features :</string>
+    <string name="text_featuresContent">• xxxxxxx \n• xxxxxxx \n• xxxxxxx \n• xxxxxxx</string>
+    <string name="text_aboutMainMenu">MAIN MENU</string>
 </resources>
