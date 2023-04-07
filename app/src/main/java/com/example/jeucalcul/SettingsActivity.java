@@ -37,7 +37,17 @@ public class SettingsActivity extends AppCompatActivity {
     /**********************************************************************************************/
 
     private TextView textViewNumberSlideBar;
+    private TextView textViewTimer;
     private SeekBar seekBarNbVies;
+
+    /**********************************************************************************************/
+    /**                                                                                          **/
+    /**                                       Choix Temps                                        **/
+    /**                                                                                          **/
+    /**********************************************************************************************/
+
+    private TextView textViewNumberSlideBarTimer;
+    private SeekBar seekBarNbMin;
 
     /**********************************************************************************************/
     /**                                                                                          **/
@@ -47,6 +57,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     private String difficulte = "";
     private int nbVies;
+    private int nbMin;
     private String radioDifficulteChecked = "";
 
 
@@ -87,8 +98,31 @@ public class SettingsActivity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {}
         });
 
+        textViewNumberSlideBarTimer = findViewById(R.id.textViewNumberSlideBarTimer);
+        textViewTimer = findViewById(R.id.textViewTimer);
+        seekBarNbMin = findViewById(R.id.seekBarNbMin);
 
+        textViewNumberSlideBarTimer.setText(String.valueOf(this.seekBarNbMin.getProgress()) );
 
+        seekBarNbMin.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                if (i != 0) {
+                    textViewNumberSlideBarTimer.setText(String.valueOf(i));
+                    textViewTimer.setText("Min");
+                }
+                else {
+                    textViewNumberSlideBarTimer.setText("Infinite");
+                    textViewTimer.setText("");
+                }
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
     }
 
     /**
@@ -97,11 +131,13 @@ public class SettingsActivity extends AppCompatActivity {
     private void envoieData() {
         this.difficulte = radioDifficulteChecked.toLowerCase();
         this.nbVies = getNbVies();
+        this.nbMin = getNbMin();
 
         if (!difficulte.isEmpty()){
             Intent toGameActivity = new Intent(this, GameActivity.class);
             toGameActivity.putExtra("difficulte", difficulte);
             toGameActivity.putExtra("nbVies", nbVies);
+            toGameActivity.putExtra("nbMin", nbMin);
             startActivity(toGameActivity);
         } else {
             Toast.makeText(this, getString(R.string.ERROR_CHECKED_RADIO), Toast.LENGTH_LONG).show();
@@ -109,7 +145,7 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     /**
-     * Regarde la tetView pour le nombre de vies et retourne la valeur
+     * Regarde la textView pour le nombre de vies et retourne la valeur
      * @return Le nombre de vie que l'utilisateur choisi - INT
      */
     private int getNbVies() {
@@ -117,5 +153,13 @@ public class SettingsActivity extends AppCompatActivity {
 
         res = Integer.parseInt(textViewNumberSlideBar.getText().toString());
         return res;
+    }
+
+    private int getNbMin() {
+        String text = textViewNumberSlideBarTimer.getText().toString();
+        if (text.equals("Infinite"))
+            return 0;
+        else
+            return Integer.parseInt(text);
     }
 }

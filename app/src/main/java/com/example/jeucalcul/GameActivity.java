@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +18,7 @@ import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
     private int lives;
+    private int time;
     private int score = 0;
     private int operand1;
     private int operand2;
@@ -38,6 +40,8 @@ public class GameActivity extends AppCompatActivity {
     private Button buttonPoint;
     private Button buttonConfirm;
     private Button buttonDelete;
+    private Button buttonPause;
+    private Button buttonSkip;
     private MenuItem toolbarLives;
     private MenuItem toolbarScore;
     private String difficulte;
@@ -53,6 +57,7 @@ public class GameActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         lives = intent.getIntExtra("nbVies", 3);
+        time = intent.getIntExtra("nbMin", 0);
         difficulte = intent.getStringExtra("difficulte");
         textViewTimer = findViewById(R.id.textViewTimer);
         textViewCalcul = findViewById(R.id.textViewCalcul);
@@ -71,6 +76,8 @@ public class GameActivity extends AppCompatActivity {
         buttonPoint = findViewById(R.id.buttonPoint);
         buttonConfirm = findViewById(R.id.buttonConfirm);
         buttonDelete = findViewById(R.id.buttonDelete);
+        buttonPause = findViewById(R.id.buttonPause);
+        buttonSkip = findViewById(R.id.buttonSkip);
 
         buttonOne.setOnClickListener(view -> addChar("1"));
         buttonTwo.setOnClickListener(view -> addChar("2"));
@@ -91,19 +98,29 @@ public class GameActivity extends AppCompatActivity {
         resetButtons();
         randomCalcul();
 
-        countDownTimer = new CountDownTimer(180001, 1000) {
-            @Override
-            public void onTick(long tempsRestant) {
-                textViewTimer.setText(getString(R.string.textViewTimer) + " " + tempsRestant/1000);
-            }
+        if (time != 0){
+            countDownTimer = new CountDownTimer((60000*time+1000), 1000) {
+                @Override
+                public void onTick(long tempsRestant) {
+                    textViewTimer.setText(getString(R.string.textViewTimer) + " " + tempsRestant/1000);
+                }
 
-            @Override
-            public void onFinish() {
-                toGameOver();
-            }
-        };
+                @Override
+                public void onFinish() {
+                    if (countDownTimer != null) {
+                        countDownTimer.cancel();
+                        countDownTimer = null;
+                        toGameOver();
+                    }
+                }
+            };
 
-        countDownTimer.start();
+            countDownTimer.start();
+        }else {
+            buttonPause.setVisibility(View.INVISIBLE);
+            buttonSkip.setVisibility(View.INVISIBLE);
+            textViewTimer.setText("");
+        }
     }
 
     @Override
