@@ -2,19 +2,14 @@ package com.example.jeucalcul;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.io.Console;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -99,7 +94,7 @@ public class SettingsActivity extends AppCompatActivity {
         });
 
         textViewNumberSlideBarTimer = findViewById(R.id.textViewNumberSlideBarTimer);
-        textViewTimer = findViewById(R.id.textViewTimer);
+        textViewTimer = findViewById(R.id.textViewMinutesSettings);
         seekBarNbMin = findViewById(R.id.seekBarNbMin);
 
         textViewNumberSlideBarTimer.setText(String.valueOf(this.seekBarNbMin.getProgress()) );
@@ -109,10 +104,10 @@ public class SettingsActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 if (i != 0) {
                     textViewNumberSlideBarTimer.setText(String.valueOf(i));
-                    textViewTimer.setText("Min");
+                    textViewTimer.setText(getString(R.string.textViewMinutesSettings));
                 }
                 else {
-                    textViewNumberSlideBarTimer.setText("Infinite");
+                    textViewNumberSlideBarTimer.setText(getString(R.string.textViewNumberSlideBarTimer));
                     textViewTimer.setText("");
                 }
             }
