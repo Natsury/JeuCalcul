@@ -246,14 +246,14 @@ public class GameActivity extends AppCompatActivity {
         if (Float.parseFloat(answer) == trueAnswer()){
             score++;
             updateToolbar();
-            Toast.makeText(this, "Right answer", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.GoodAnserGameActivity), Toast.LENGTH_SHORT).show();
             if (enPause)
                 enablePause();
             else
                 nextCalcul();
         }else{
             lives--;
-            Toast.makeText(this, "Wrong answer", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.BadAnserGameActivity), Toast.LENGTH_SHORT).show();
             if (lives > 0) {
                 updateToolbar();
                 if (enPause)
@@ -275,7 +275,7 @@ public class GameActivity extends AppCompatActivity {
         }else {
             enPause = true;
             buttonPause.setEnabled(false);
-            Toast.makeText(this, "Game will be paused before the next calculation", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.PauseTimer), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -297,7 +297,7 @@ public class GameActivity extends AppCompatActivity {
         buttonDelete.setEnabled(false);
         buttonSkip.setEnabled(false);
         buttonPause.setText("PLAY");
-        Toast.makeText(this, "Game paused", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.PausedTimer), Toast.LENGTH_SHORT).show();
         buttonPause.setEnabled(true);
     }
 

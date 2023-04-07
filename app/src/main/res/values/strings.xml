@@ -68,4 +68,8 @@
     <string name="textViewTimerSettings">Timer :</string>
     <string name="textViewMinutesSettings" translatable="false">Min</string>
     <string name="textViewNumberSlideBarTimer">Infinite</string>
+    <string name="GoodAnserGameActivity">Right answer</string>
+    <string name="BadAnserGameActivity">Wrong answer</string>
+    <string name="PauseTimer">Game will be paused before the next calculation</string>
+    <string name="PausedTimer">Game paused</string>
 </resources>

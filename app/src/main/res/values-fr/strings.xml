@@ -34,4 +34,8 @@
     <string name="text_specialCredits">CREDIT SPECIAUX</string>
     <string name="textViewTimerSettings">Chronomètre : </string>
     <string name="textViewNumberSlideBarTimer">Infini</string>
+    <string name="GoodAnserGameActivity">Bonne réponse</string>
+    <string name="BadAnserGameActivity">Mauvaise réponse</string>
+    <string name="PauseTimer">La partie va être mise en pause au prochain calcul</string>
+    <string name="PausedTimer">Partie mise en pause</string>
 </resources>
