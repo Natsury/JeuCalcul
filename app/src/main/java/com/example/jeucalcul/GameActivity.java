@@ -3,7 +3,6 @@ package com.example.jeucalcul;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -59,7 +58,7 @@ public class GameActivity extends AppCompatActivity {
         lives = intent.getIntExtra("nbVies", 3);
         time = intent.getIntExtra("nbMin", 0);
         difficulte = intent.getStringExtra("difficulte");
-        textViewTimer = findViewById(R.id.textViewTimer);
+        textViewTimer = findViewById(R.id.textViewMinutesSettings);
         textViewCalcul = findViewById(R.id.textViewCalcul);
         textViewAnswer = findViewById(R.id.textViewAnswer);
         buttonOne = findViewById(R.id.buttonOne);

@@ -13,11 +13,11 @@
     <string name="text_score">SCORE :</string>
     <string name="text_saveScore">Ton score :</string>
     <string name="text_buttonSaveScore">ENREGISTRER LE SCORE</string>
-    <string name="text_buttonMainMenu">MENU PRINCIPALE</string>
+    <string name="text_buttonMainMenu">MENU PRINCIPAL</string>
     <string name="hint_editEnterNickame">Entre ton pseudo</string>
     <string name="text_aboutCredits">Créé par : \n\nLucas Priez \nMattéo Leroux</string>
     <string name="text_featuresTitle">Features :</string>
-    <string name="text_aboutMainMenu">MENU PRINCIPALE</string>
+    <string name="text_aboutMainMenu">MENU PRINCIPAL</string>
     <string name="textViewDifficulte">Difficulté : </string>
     <string name="radioDifficulte1">Facile</string>
     <string name="radioDifficulte2">Difficile</string>
@@ -32,4 +32,6 @@
     <string name="ERROR_NYCKNAME_TOO_LONG">Le pseudo ne peut pas avoir plus de 20 caractères</string>
     <string name="ScoreEnregiste">Score sauvegardé !</string>
     <string name="text_specialCredits">CREDIT SPECIAUX</string>
+    <string name="textViewTimerSettings">Chronomètre : </string>
+    <string name="textViewNumberSlideBarTimer">Infini</string>
 </resources>

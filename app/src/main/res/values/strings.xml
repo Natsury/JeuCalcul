@@ -65,4 +65,7 @@
     <string name="ERROR_EMPTY_NYCKNAME">Nickname can\'t be empty</string>
     <string name="ERROR_NYCKNAME_TOO_LONG">Nickname can\'t be longer than 20 characters</string>
     <string name="ScoreEnregiste">Score saved !</string>
+    <string name="textViewTimerSettings">Timer :</string>
+    <string name="textViewMinutesSettings" translatable="false">Min</string>
+    <string name="textViewNumberSlideBarTimer">Infinite</string>
 </resources>
