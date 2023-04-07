@@ -54,7 +54,7 @@ public class ScoreDao extends BaseDao<Score> {
                 " MAX(" + COLUMN_SCORE + ") AS " + COLUMN_SCORE + "," +
                 COLUMN_DIFFICULTE +
                 " FROM " + TABLE_NAME +
-                " GROUP BY " + COLUMN_NICKNAME;
+                " GROUP BY " + COLUMN_NICKNAME + ", " + COLUMN_DIFFICULTE;
 
         Cursor cursor = db.rawQuery(query, null);
 

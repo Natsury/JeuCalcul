@@ -12,8 +12,8 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="1857df63-3bd2-4691-8cc2-e92efeec264f">
-      <console name="Connection" type="STANDARD" schema="main" session="Main"><![CDATA[SELECT * FROM SCORES]]></console>
+    <connection id="dd29dfb7-69cb-4480-b245-0e3f6841cfd9">
+      <console name="Connection" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -39,7 +39,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="1857df63-3bd2-4691-8cc2-e92efeec264f" active="true" signed="true">
+      <connection id="dd29dfb7-69cb-4480-b245-0e3f6841cfd9" active="true" signed="true">
         <database>
           <name value="Connection" />
           <description value="" />
