@@ -29,7 +29,7 @@
     <string name="hint_editEnterNickame">Enter your nickname</string>
     <string name="text_aboutCredits">Created by : \n\nLucas Priez \nMattéo Leroux</string>
     <string name="text_featuresTitle">Features :</string>
-    <string name="text_featuresContent">• xxxxxxx \n• xxxxxxx \n• xxxxxxx \n• xxxxxxx</string>
+    <string name="text_featuresContent" translatable="false">• 3 difficultés différentes (on rajoute un chiffre dans les calculs si la difficulté augmente)\n• Ajout de fonctionnalités de pause et de passer le calcul en cours\n• Ajout d\'une page de crédits spéciaux</string>
     <string name="text_aboutMainMenu">MAIN MENU</string>
     <string name="textViewDifficulte">Difficulty : </string>
     <string name="radioDifficulte1">Easy</string>
@@ -41,7 +41,7 @@
     <string name="textViewVies">Lives</string>
     <string name="ERROR_CHECKED_RADIO">Please choose a difficulty</string>
     <string name="textViewTimer">Time left : </string>
-    <string name="text_specialCredits" translatable="false">SPECIAL CREDITS</string>
+    <string name="text_specialCredits">SPECIAL CREDITS</string>
     <string name="credits_text" translatable="false">"Dans une galaxie lointaine, sur la planète Terre, se trouvent deux jeunes étudiants en 2ème année de BUT Informatique : Lucas Priez et Mattéo Leroux. Ces deux padawans de la programmation sont passionnés par les technologies de l'information et sont déterminés à se distinguer dans leur domaine en créant la meilleure application Android possible.
         \nLeur objectif est ambitieux, mais ils sont prêts à tout pour impressionner leur professeur, Jérome Gerard. En effet, leur note dépend en grande partie de leur réussite dans ce projet, ce qui les pousse à travailler dur et à redoubler d'efforts pour atteindre leur but.
         \nCependant, leur parcours n'est pas sans difficultés. Les étudiants doivent faire face à des obstacles technologiques tels que des bugs informatiques, des failles de sécurité ou encore des difficultés de codage. En outre, la rivalité entre eux peut aussi constituer un frein à leur collaboration, leur créativité et leur réussite.
