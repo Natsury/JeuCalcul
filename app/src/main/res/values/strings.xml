@@ -22,7 +22,7 @@
     <string name="text_buttonSkip">SKIP</string>
     <string name="text_lives">LIVES :</string>
     <string name="text_score">SCORE :</string>
-    <string name="text_scoreSaveTitle">GAME OVER</string>
+    <string name="text_scoreSaveTitle" translatable="false">GAME OVER</string>
     <string name="text_saveScore">Your score :</string>
     <string name="text_buttonSaveScore">SAVE YOUR SCORE</string>
     <string name="text_buttonMainMenu">MAIN MENU</string>
@@ -41,4 +41,25 @@
     <string name="textViewVies">Lives</string>
     <string name="ERROR_CHECKED_RADIO">Please choose a difficulty</string>
     <string name="textViewTimer">Time left : </string>
+    <string name="text_specialCredits">SPECIAL CREDITS</string>
+    <string name="credits_text">"Dans une galaxie lointaine, sur la planète Terre, se trouvent deux jeunes étudiants en 2ème année de BUT Informatique : Lucas Priez et Mattéo Leroux. Ces deux padawans de la programmation sont passionnés par les technologies de l'information et sont déterminés à se distinguer dans leur domaine en créant la meilleure application Android possible.
+        \nLeur objectif est ambitieux, mais ils sont prêts à tout pour impressionner leur professeur, Jérome Gerard. En effet, leur note dépend en grande partie de leur réussite dans ce projet, ce qui les pousse à travailler dur et à redoubler d'efforts pour atteindre leur but.
+        \nCependant, leur parcours n'est pas sans difficultés. Les étudiants doivent faire face à des obstacles technologiques tels que des bugs informatiques, des failles de sécurité ou encore des difficultés de codage. En outre, la rivalité entre eux peut aussi constituer un frein à leur collaboration, leur créativité et leur réussite.
+        \nMalgré tout, ces jeunes étudiants possèdent une grande ingéniosité et une détermination sans faille. Ils sont convaincus qu'ils peuvent surmonter ces épreuves pour créer l'application ultime qui leur permettra de briller aux yeux de leur professeur et d'obtenir la reconnaissance qu'ils méritent.
+        \nSuivez leur périple à travers les étoiles, alors qu'ils se battent pour créer l'application ultime et gagner la reconnaissance de leur maître. Découvrez leur aventure passionnante, où le destin de leur avenir académique repose sur leur créativité et leur persévérance. Bienvenue dans l'aventure de Lucas et Mattéo, où la technologie et l'innovation sont les maîtres-mots pour réussir.
+        \n\nGame Designer\nMattéo Leroux\n
+        \nDatabase Administrator\nLucas Priez\n
+        \nUI Developers\nLucas Priez &amp; Mattéo Leroux\n
+        \nLead Data Analyst\nLucas Priez\n
+        \nAssistant Data Analyst\nMattéo Leroux\n
+        \nApplication Testers\nLucas Priez &amp; Mattéo Leroux\n
+        \nGraphic Designer\nMattéo Leroux\n
+        \nProject Manager\nLucas Priez\n
+        \nCode Magicians\nLucas Priez &amp; Mattéo Leroux\n
+        \nComputer Engineers\nLucas Priez &amp; Mattéo Leroux\n
+        \nExecutive Producer\nLucas Priez\n
+        \nSoundtrack Composer\nMattéo Leroux\n
+        \nGestion des copyrights\nPersonne lol\n
+        \nSpecial thanks to Jérome Gerard, their professor, for his support and guidance throughout the project.\n\n"</string>
+    <string name="TitleText">A GAME MADE BY\n\nLUCAS PRIEZ\nAND\nMATTEO LEROUX\n</string>
 </resources>

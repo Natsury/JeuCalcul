@@ -41,6 +41,17 @@
             android:textSize="16sp" />
 
         <Button
+            android:id="@+id/buttonCredits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="80dp"
+            android:text="@string/text_specialCredits" />
+
+        <Button
             android:id="@+id/buttonMainMenuAbout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
