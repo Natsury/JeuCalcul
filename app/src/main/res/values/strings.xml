@@ -31,4 +31,14 @@
     <string name="text_featuresTitle">Features :</string>
     <string name="text_featuresContent">• xxxxxxx \n• xxxxxxx \n• xxxxxxx \n• xxxxxxx</string>
     <string name="text_aboutMainMenu">MAIN MENU</string>
+    <string name="textViewDifficulte">Difficulty : </string>
+    <string name="radioDifficulte1">Easy</string>
+    <string name="radioDifficulte2">Hard</string>
+    <string name="radioDifficulteInfinite">Impossible</string>
+    <string name="textViewTimerParam">Timer : </string>
+    <string name="buttonValideParam">Confirm </string>
+    <string name="textViewNombreVies">Lives :</string>
+    <string name="textViewVies">Lives</string>
+    <string name="ERROR_CHECKED_RADIO">Please choose a difficulty</string>
+    <string name="textViewTimer">Time left : </string>
 </resources>
