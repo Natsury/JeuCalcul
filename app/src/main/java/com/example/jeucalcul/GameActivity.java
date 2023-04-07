@@ -47,6 +47,8 @@ public class GameActivity extends AppCompatActivity {
     private String difficulte;
     private CountDownTimer countDownTimer;
     private TextView textViewTimer;
+    private boolean enPause = false;
+    private long timeLeft = 0;
 
 
     @Override
@@ -95,27 +97,15 @@ public class GameActivity extends AppCompatActivity {
         buttonDelete.setOnClickListener(view -> resetAnswer());
         buttonConfirm.setOnClickListener(view -> checkAnswer());
 
+        buttonPause.setOnClickListener(view -> pauseGame());
+        buttonSkip.setOnClickListener(view -> nextCalcul());
+
         resetButtons();
         randomCalcul();
 
         if (time != 0){
-            countDownTimer = new CountDownTimer((60000*time+1000), 1000) {
-                @Override
-                public void onTick(long tempsRestant) {
-                    textViewTimer.setText(getString(R.string.textViewTimer) + " " + tempsRestant/1000);
-                }
-
-                @Override
-                public void onFinish() {
-                    if (countDownTimer != null) {
-                        countDownTimer.cancel();
-                        countDownTimer = null;
-                        toGameOver();
-                    }
-                }
-            };
-
-            countDownTimer.start();
+            timeLeft = (60000*(long)time+1000);
+            startTimer();
         }else {
             buttonPause.setVisibility(View.INVISIBLE);
             buttonSkip.setVisibility(View.INVISIBLE);
@@ -258,19 +248,108 @@ public class GameActivity extends AppCompatActivity {
             score++;
             updateToolbar();
             Toast.makeText(this, "Right answer", Toast.LENGTH_SHORT).show();
-            resetAnswer();
-            randomCalcul();
+            if (enPause)
+                enablePause();
+            else
+                nextCalcul();
         }else{
             lives--;
             Toast.makeText(this, "Wrong answer", Toast.LENGTH_SHORT).show();
             if (lives > 0) {
                 updateToolbar();
-                resetAnswer();
-                randomCalcul();
+                if (enPause)
+                    enablePause();
+                else
+                    nextCalcul();
             }else{
                 toGameOver();
             }
         }
+    }
+
+    private void pauseGame(){
+        if (enPause){
+            enPause = false;
+            disablePause();
+            nextCalcul();
+            startTimer();
+        }else {
+            enPause = true;
+            buttonPause.setEnabled(false);
+            Toast.makeText(this, "Game will be paused before the next calculation", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void enablePause(){
+        pauseTimer();
+        buttonOne.setEnabled(false);
+        buttonTwo.setEnabled(false);
+        buttonThree.setEnabled(false);
+        buttonFour.setEnabled(false);
+        buttonFive.setEnabled(false);
+        buttonSix.setEnabled(false);
+        buttonSeven.setEnabled(false);
+        buttonEight.setEnabled(false);
+        buttonNine.setEnabled(false);
+        buttonZero.setEnabled(false);
+        buttonMinus.setEnabled(false);
+        buttonPoint.setEnabled(false);
+        buttonConfirm.setEnabled(false);
+        buttonDelete.setEnabled(false);
+        buttonSkip.setEnabled(false);
+        buttonPause.setText("PLAY");
+        Toast.makeText(this, "Game paused", Toast.LENGTH_SHORT).show();
+        buttonPause.setEnabled(true);
+    }
+
+    private void disablePause(){
+        startTimer();
+        buttonOne.setEnabled(true);
+        buttonTwo.setEnabled(true);
+        buttonThree.setEnabled(true);
+        buttonFour.setEnabled(true);
+        buttonFive.setEnabled(true);
+        buttonSix.setEnabled(true);
+        buttonSeven.setEnabled(true);
+        buttonEight.setEnabled(true);
+        buttonNine.setEnabled(true);
+        buttonZero.setEnabled(true);
+        buttonMinus.setEnabled(true);
+        buttonPoint.setEnabled(true);
+        buttonConfirm.setEnabled(true);
+        buttonDelete.setEnabled(true);
+        buttonSkip.setEnabled(true);
+        buttonPause.setText("PAUSE");
+    }
+
+    private void nextCalcul() {
+        resetAnswer();
+        randomCalcul();
+    }
+
+    private void pauseTimer() {
+        if (countDownTimer != null){
+            countDownTimer.cancel();
+        }
+    }
+    private void startTimer() {
+        countDownTimer = new CountDownTimer(timeLeft, 1000) {
+            @Override
+            public void onTick(long tempsRestant) {
+                timeLeft = tempsRestant;
+                textViewTimer.setText(getString(R.string.textViewTimer) + " " + tempsRestant / 1000);
+            }
+
+            @Override
+            public void onFinish() {
+                if (countDownTimer != null) {
+                    countDownTimer.cancel();
+                    countDownTimer = null;
+                    toGameOver();
+                }
+            }
+        };
+        countDownTimer.start();
     }
 }
 
