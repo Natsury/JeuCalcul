@@ -152,7 +152,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     private int getNbMin() {
         String text = textViewNumberSlideBarTimer.getText().toString();
-        if (text.equals("Infinite"))
+        if (text == getString(R.string.textViewNumberSlideBarTimer))
             return 0;
         else
             return Integer.parseInt(text);
